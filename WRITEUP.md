@@ -1,6 +1,6 @@
 # Org Chart Inference: write-up
 
-**Live app:** (paste your hosted link here) · **Run it:** `python eval/run_eval.py` (about 90s) then `python app/export.py`
+**Live app:** [https://snazzy-lamington-9df4eb.netlify.app/](https://snazzy-lamington-9df4eb.netlify.app/) · **Run it:** `pip install -r requirements.txt`, then `python eval/run_eval.py` (about 90s), then `python app/export.py`
 
 ## Approach in one paragraph
 I built the answer key before the data. A generator simulates 500 companies (100 to 700 people; startup, growth and enterprise shapes) with a hidden true org tree, then a "mess machine" turns it into the flat list: abbreviations, typos, missing function/team/location, stale seniority, dual-hat titles, and leaders deleted from the dataset entirely. Because the truth is known, every claim below is measured, not eyeballed. Inference then parses titles, scores candidate managers from weak signals, assigns globally, and abstains or attaches to a "ghost" leader when it can't resolve an edge.
