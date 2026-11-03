@@ -1,0 +1,26 @@
+people: 129901
+full run 26s  threshold=0.762  train=67420 test=61981
+TEST {'n': 61981, 'coverage': 0.3529, 'precision': 0.9184, 'recall': 0.3241, 'wrong_edge_rate': 0.0288, 'raw_accuracy': 0.5183} ECE 0.0065
+  archetype  seed           cov=0.49 prec=0.934 raw=0.617 wrong=0.033
+  archetype  growth         cov=0.38 prec=0.925 raw=0.552 wrong=0.029
+  archetype  enterprise     cov=0.26 prec=0.896 raw=0.443 wrong=0.027
+  messiness  0.00-0.33      cov=0.42 prec=0.953 raw=0.576 wrong=0.020
+  messiness  0.33-0.66      cov=0.34 prec=0.923 raw=0.510 wrong=0.026
+  messiness  0.66-1.01      cov=0.29 prec=0.849 raw=0.455 wrong=0.043
+  level      leaders(1-4)   cov=0.68 prec=0.921 raw=0.795 wrong=0.053
+  level      ICs(5-7)       cov=0.29 prec=0.917 raw=0.463 wrong=0.024
+  ablation full               raw_acc=0.518 cov=0.34 prec=0.927 wrong=0.025
+  ablation no_global_solver   raw_acc=0.529 cov=0.37 prec=0.905 wrong=0.035
+  ablation no_scope           raw_acc=0.459 cov=0.25 prec=0.919 wrong=0.020
+  ablation no_region          raw_acc=0.484 cov=0.31 prec=0.940 wrong=0.019
+  ablation no_ghost_nodes     raw_acc=0.519 cov=0.39 prec=0.890 wrong=0.043
+  ablation no_layer_logic     raw_acc=0.477 cov=0.27 prec=0.831 wrong=0.046
+  ablation naive_baseline     raw_acc=0.389 cov=0.24 prec=0.852 wrong=0.036
+ghost truth n= 3019 ghost found: 323 ghost emitted-correct: 133
+FAIL Sales Manager (SMB) | pred c113-0197 truth MISSING | cal 1.00 {'function': 2.0, 'layer': 0, 'scope': 1.4, 'region': 0.5}
+FAIL Sr. Manager, Sales (SMB) | pred c113-0197 truth MISSING | cal 1.00 {'function': 2.0, 'layer': 0, 'scope': 1.4, 'region': 0.5}
+FAIL Manager (SMB), APAC | pred c113-0197 truth MISSING | cal 1.00 {'function': 2.0, 'layer': 0, 'scope': 1.4, 'region': 0.5}
+FAIL Manager, Sales - SMB | pred c113-0197 truth MISSING | cal 1.00 {'function': 2.0, 'layer': 0, 'scope': 1.4, 'region': 0.5}
+FAIL Managr, Sales (SMB) - APAC | pred c113-0197 truth MISSING | cal 1.00 {'function': 2.0, 'layer': 0, 'scope': 1.4, 'region': 0.5}
+FAIL Sales Director - APAC | pred c149-0128 truth c149-0129 | cal 1.00 {'function': 2.0, 'layer': 0, 'region': 0.5}
+done 85s
